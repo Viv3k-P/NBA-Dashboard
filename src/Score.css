@@ -1,19 +1,98 @@
 /* CSS styles */
+
 .scoreboard {
+    background-color: rgba(255, 255, 255, 0.685);
     display: grid;
     grid-template-columns: auto auto;
     padding: 10px;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     border: 2px solid black;
-    padding: 20px;
-    width: 200px;
-    height: 150px; 
+    padding: 0px;
+    width: 500px;
+    height: 300px; 
     -webkit-box-shadow: 0px 0px 7px 4px #000000; 
     box-shadow: 0px 0px 7px 4px #000000;
+    font-size: 30px;
+
+      animation-name: animate-pop;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  animation-duration: 0.5s;
+    text-align: center;
     
 
   }
-  .t1_score{
-      color: blue;
-  }
+  @keyframes animate-pop {
+    0% {
+      opacity: 0;
+      transform: scale(0.5, 0.5);
+    }
   
+    100% {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+  }
+.scoreboard_t1{  
+
+    text-align: left;  
+    padding: 0px; 
+    margin:0px;
+    background-color: #5f4bb6;
+    /* background-color: #266DD3; */
+    
+    
+  
+    }  
+.t1_score{
+    font-family: 'Lato', sans-serif;
+    font-size: 60px;
+    /* color: #4b8f8c; */
+    /* background-color: #266DD3; */
+    background-color: #5f4bb6;
+    padding-top: 36px;
+    /* #text{
+    font-family: verdana;
+    font-weight: bold;
+    text-align: center;
+    font-size: 21px;
+    letter-spacing: -1px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    text-shadow: rgba(0, 0, 0, 0) 2px 2px 2px;
+} */
+}
+img {  
+    object-fit: cover;  
+    height: 150px;
+    margin:0px;
+    vertical-align: top;
+
+    }  
+
+.scoreboard_t2{  
+
+    text-align: left;  
+    padding: 0px; 
+    margin:0px;
+    background-color: #202a25;
+    
+    
+    
+    }  
+.t2_score{
+    font-size: 60px;
+    padding-top: 36px;
+    font-family: 'Lato', sans-serif;
+    color:#c4ebc8;
+    background-color: #202a25;
+    /* #text{
+    font-family: verdana;
+    font-weight: bold;
+    text-align: center;
+    font-size: 21px;
+    letter-spacing: -1px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    text-shadow: rgba(0, 0, 0, 0) 2px 2px 2px;
+} */
+}

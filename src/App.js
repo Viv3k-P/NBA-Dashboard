@@ -2,18 +2,31 @@ import React, {useState,useEffect} from 'react';
 import './App.css';
 import axios from 'axios'
 import Score from './Score.js'
+import Navbar from './Navbar.js'
 import { getNbaScores } from './api.js'
-
+import hou from './images/HOU.png'
 function App() {
-  const url = "http://data.nba.net/10s/prod/v1/20211223/scoreboard.json"
-  const [teams, setTeams] = useState([])//THIS IS A REACT HOOK ***************-resume
+  const mainUrl = "http://data.nba.net/10s/prod/v1/today.json"
+  const url = "http://data.nba.net/prod/v2/20211228/scoreboard.json"
+
+  const [teams, setTeams] = useState([])//THIS IS A REACT HOOK ***************-resume ---add array to get link
+
+  const [link, setLink] = useState([url])
+  
+    useEffect(() => {
+      axios.get(url)
+      .then(response => {
+        setLink("http://data.nba.net" + response.data.links.currentScoreboard)
+      })
+  }, [url])
+  
 
     useEffect(() => {
-        axios.get(url)
+        axios.get(link)
         .then(response => {
           setTeams(response.data)
         })
-    }, [url])
+    }, [link])
     console.log(teams)
     
     if(teams.games){
@@ -21,6 +34,7 @@ function App() {
       
       return ( 
         <header className='App-header'>
+          <Navbar/>
         <div className="nba-app">
 
             {data.map(a => {

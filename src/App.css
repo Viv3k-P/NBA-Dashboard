@@ -10,6 +10,9 @@
   width: 50%;
   /* border: 3px solid green; */
   padding: 10px;
+  margin-left: 400px;
+
+
   
 }
 .App{
@@ -36,7 +39,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white; */
-  background-image: url("https://media.istockphoto.com/vectors/abstract-white-background-vector-id1146367620?k=20&m=1146367620&s=612x612&w=0&h=tsmR47laom9tce4aekLHYVvDuelZ1uzI0W5Mtr4xD_s=");
+  background-image: url("./back.png");
 
 }
 
