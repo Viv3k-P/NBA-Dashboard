@@ -11,17 +11,20 @@ const Navbar = () => {
                 {/* <div className="menu-link"> */}
                     <ul>
                         <li onClick={() => console.log("clicked!")}>
-                            <a href='#'>Home</a>
+                            <a href='/'>Home</a>
                         </li>
 
                         <li>
-                            <a href='#'>Scores</a>
+                            <a href='/scores'>Scores</a>
                         </li>
                         <li>
-                            <a href='#'>Dashboard</a>
+                            <a href='/dashboard'>Dashboard</a>
                         </li>
                         <li>
-                            <a href='#'>About</a>
+                            <a href='/about'>About</a>
+                        </li>
+                        <li>
+                            <a href='/SignIn'>Sign In</a>
                         </li>
                     </ul>
                 {/* </div> */}
