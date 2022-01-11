@@ -5,8 +5,8 @@ import Score from '../Scorecard/Score.js'
 import Navbar from '../Navbar/Navbar'
 
 function Dashboard() {
-  const mainUrl = "http://data.nba.net/10s/prod/v1/today.json"
-  const url = "http://data.nba.net/prod/v2/20211228/scoreboard.json"
+  const mainUrl = "//data.nba.net/10s/prod/v1/today.json"
+  const url = "//data.nba.net/prod/v2/20211228/scoreboard.json"
 
   const [teams, setTeams] = useState([])//THIS IS A REACT HOOK ***************-resume ---add array to get link
 
@@ -15,7 +15,7 @@ function Dashboard() {
     useEffect(() => {
       axios.get(mainUrl)
       .then(response => {
-        setLink("http://data.nba.net" + response.data.links.currentScoreboard)
+        setLink("//data.nba.net" + response.data.links.currentScoreboard)
       })
   }, [url])
   
